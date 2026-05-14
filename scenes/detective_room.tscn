@@ -1,0 +1,368 @@
+[gd_scene format=3 uid="uid://dqkgfhts1ovyb"]
+
+[ext_resource type="Texture2D" uid="uid://baly3nnw66u6p" path="res://assets/images/bg detective (2).jpeg" id="1_5kqbp"]
+[ext_resource type="Script" uid="uid://bvi1ytmksm0yy" path="res://scripts/detective_room.gd" id="1_j2orx"]
+[ext_resource type="Texture2D" uid="uid://qfywrh3rkwqx" path="res://assets/images/gambar bayi.png" id="2_awokv"]
+[ext_resource type="FontFile" uid="uid://ochhsv7vyfk0" path="res://assets/fonts/Retro Gaming.ttf" id="3_j2orx"]
+[ext_resource type="Texture2D" uid="uid://c005jsspilu0i" path="res://assets/images/hambar brankas.png" id="5_guhhk"]
+[ext_resource type="Texture2D" uid="uid://cd8bd518lpwqo" path="res://assets/images/brankaskebuka.png" id="6_6efvh"]
+[ext_resource type="Texture2D" uid="uid://hlpa8bja141d" path="res://assets/images/2 kertas.png" id="7_s0us5"]
+
+[node name="DetectiveRoom" type="Control" unique_id=2105667867]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j2orx")
+
+[node name="Background" type="TextureRect" parent="." unique_id=487118027]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_5kqbp")
+expand_mode = 1
+
+[node name="BrankasArea" type="Button" parent="." unique_id=1457288520]
+layout_mode = 0
+offset_left = 985.0
+offset_top = 228.0
+offset_right = 1125.0
+offset_bottom = 402.0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="FotoArea" type="Button" parent="." unique_id=39125309]
+layout_mode = 0
+offset_left = 718.0
+offset_top = 188.0
+offset_right = 800.0
+offset_bottom = 289.0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="OverlayFoto" type="ColorRect" parent="." unique_id=2034523508]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5176471)
+
+[node name="GambarFoto" type="TextureRect" parent="OverlayFoto" unique_id=114225309]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -544.0
+offset_top = -353.5
+offset_right = 544.0
+offset_bottom = 353.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_awokv")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BtnBackFoto" type="Button" parent="OverlayFoto" unique_id=1617172502]
+layout_mode = 0
+offset_left = 1060.0
+offset_top = 612.0
+offset_right = 1187.0
+offset_bottom = 659.0
+theme_override_fonts/font = ExtResource("3_j2orx")
+theme_override_font_sizes/font_size = 30
+text = "< Back"
+
+[node name="OverlayBrankas" type="ColorRect" parent="." unique_id=1313172870]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5176471)
+
+[node name="GambarBrankas" type="TextureRect" parent="OverlayBrankas" unique_id=1976385221]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -524.0
+offset_top = -252.0
+offset_right = 500.5
+offset_bottom = 247.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("5_guhhk")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BtnBackBrankas" type="Button" parent="OverlayBrankas" unique_id=1227020354]
+layout_mode = 0
+offset_left = 1060.0
+offset_top = 612.0
+offset_right = 1187.0
+offset_bottom = 659.0
+theme_override_fonts/font = ExtResource("3_j2orx")
+theme_override_font_sizes/font_size = 30
+text = "< Back"
+
+[node name="BtnBulan" type="Button" parent="OverlayBrankas" unique_id=775611342]
+layout_mode = 0
+offset_left = 495.0
+offset_top = 274.0
+offset_right = 575.0
+offset_bottom = 354.0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="EfekGelap" type="ColorRect" parent="OverlayBrankas/BtnBulan" unique_id=598037586]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="BtnBintang" type="Button" parent="OverlayBrankas" unique_id=1892621084]
+layout_mode = 0
+offset_left = 598.0
+offset_top = 274.0
+offset_right = 678.0
+offset_bottom = 354.0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="EfekGelap" type="ColorRect" parent="OverlayBrankas/BtnBintang" unique_id=95943132]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="BtnMatahari" type="Button" parent="OverlayBrankas" unique_id=2058334472]
+layout_mode = 0
+offset_left = 701.0
+offset_top = 274.0
+offset_right = 781.0
+offset_bottom = 354.0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="EfekGelap" type="ColorRect" parent="OverlayBrankas/BtnMatahari" unique_id=273161748]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="BtnAir" type="Button" parent="OverlayBrankas" unique_id=119051486]
+layout_mode = 0
+offset_left = 495.0
+offset_top = 379.0
+offset_right = 575.0
+offset_bottom = 459.0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="EfekGelap" type="ColorRect" parent="OverlayBrankas/BtnAir" unique_id=1864031928]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="BtnApi" type="Button" parent="OverlayBrankas" unique_id=567225007]
+layout_mode = 0
+offset_left = 598.0
+offset_top = 379.0
+offset_right = 678.0
+offset_bottom = 459.0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="EfekGelap" type="ColorRect" parent="OverlayBrankas/BtnApi" unique_id=1185560345]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="BtnAngin" type="Button" parent="OverlayBrankas" unique_id=608759986]
+layout_mode = 0
+offset_left = 702.0
+offset_top = 378.0
+offset_right = 782.0
+offset_bottom = 458.0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="EfekGelap" type="ColorRect" parent="OverlayBrankas/BtnAngin" unique_id=1498729763]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="GambarBrankasBuka" type="TextureRect" parent="OverlayBrankas" unique_id=47282428]
+visible = false
+layout_mode = 0
+offset_left = 108.0
+offset_top = 85.0
+offset_right = 1108.0
+offset_bottom = 636.0
+texture = ExtResource("6_6efvh")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BtnKunci" type="Button" parent="OverlayBrankas/GambarBrankasBuka" unique_id=842214239]
+layout_mode = 0
+offset_left = 482.0
+offset_top = 382.0
+offset_right = 578.0
+offset_bottom = 437.0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="BtnKertas" type="Button" parent="OverlayBrankas/GambarBrankasBuka" unique_id=1106330074]
+layout_mode = 0
+offset_left = 606.0
+offset_top = 370.0
+offset_right = 782.0
+offset_bottom = 443.0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="ZoomKertas" type="ColorRect" parent="." unique_id=694713426]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5176471)
+
+[node name="GambarKertas" type="TextureRect" parent="ZoomKertas" unique_id=879189764]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -459.0
+offset_top = -266.0
+offset_right = 460.0
+offset_bottom = 252.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_s0us5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BtnBackKertas" type="Button" parent="ZoomKertas" unique_id=1220999001]
+layout_mode = 0
+offset_left = 1060.0
+offset_top = 612.0
+offset_right = 1187.0
+offset_bottom = 659.0
+theme_override_fonts/font = ExtResource("3_j2orx")
+theme_override_font_sizes/font_size = 30
+text = "< Back"
+
+[node name="BtnTumpukKertas" type="Button" parent="ZoomKertas" unique_id=1951577741]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -67.5
+offset_top = -122.0
+offset_right = 67.5
+offset_bottom = -91.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_j2orx")
+theme_override_font_sizes/font_size = 20
+text = "Luruskan Kertas"
+flat = true
+
+[node name="NotifKunci" type="Label" parent="." unique_id=1232879883]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -215.5
+offset_top = 44.0
+offset_right = 215.5
+offset_bottom = 75.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_j2orx")
+theme_override_font_sizes/font_size = 24
+text = "Kunci Ruang Bom Didapatkan!"
+
+[node name="PesanPintu" type="Label" parent="." unique_id=2066298400]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -232.5
+offset_top = 34.0
+offset_right = 232.5
+offset_bottom = 60.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_j2orx")
+theme_override_font_sizes/font_size = 25
+text = "Pintu Terkunci. Butuh kunci ruangan."
+
+[node name="PintuArea" type="Button" parent="." unique_id=730743081]
+layout_mode = 0
+offset_left = 1157.0
+offset_top = 120.0
+offset_right = 1281.0
+offset_bottom = 645.0
+mouse_default_cursor_shape = 2
+flat = true
+
+[connection signal="pressed" from="BrankasArea" to="." method="_on_brankas_area_pressed"]
+[connection signal="pressed" from="FotoArea" to="." method="_on_foto_area_pressed"]
+[connection signal="pressed" from="OverlayFoto/BtnBackFoto" to="." method="_on_btn_back_foto_pressed"]
+[connection signal="pressed" from="OverlayBrankas/BtnBackBrankas" to="." method="_on_btn_back_brankas_pressed"]
+[connection signal="pressed" from="OverlayBrankas/BtnBulan" to="." method="_on_btn_bulan_pressed"]
+[connection signal="pressed" from="OverlayBrankas/BtnBintang" to="." method="_on_btn_bintang_pressed"]
+[connection signal="pressed" from="OverlayBrankas/BtnMatahari" to="." method="_on_btn_matahari_pressed"]
+[connection signal="pressed" from="OverlayBrankas/BtnAir" to="." method="_on_btn_air_pressed"]
+[connection signal="pressed" from="OverlayBrankas/BtnApi" to="." method="_on_btn_api_pressed"]
+[connection signal="pressed" from="OverlayBrankas/BtnAngin" to="." method="_on_btn_angin_pressed"]
+[connection signal="pressed" from="OverlayBrankas/GambarBrankasBuka/BtnKunci" to="." method="_on_btn_kunci_pressed"]
+[connection signal="pressed" from="OverlayBrankas/GambarBrankasBuka/BtnKertas" to="." method="_on_btn_kertas_pressed"]
+[connection signal="pressed" from="ZoomKertas/BtnBackKertas" to="." method="_on_btn_back_kertas_pressed"]
+[connection signal="pressed" from="ZoomKertas/BtnTumpukKertas" to="." method="_on_btn_tumpuk_kertas_pressed"]
+[connection signal="pressed" from="PintuArea" to="." method="_on_pintu_area_pressed"]

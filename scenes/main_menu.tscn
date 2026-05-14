@@ -1,0 +1,190 @@
+[gd_scene format=3 uid="uid://bwshw6768beds"]
+
+[ext_resource type="Texture2D" uid="uid://sroqw1ot03tk" path="res://assets/images/main_menu_bg.jpeg" id="1_bqqt6"]
+[ext_resource type="Script" uid="uid://da53dxvbcxa23" path="res://scripts/main_menu.gd" id="1_wu84c"]
+[ext_resource type="Texture2D" uid="uid://bn8247x2pdgbd" path="res://assets/images/Vignette.png" id="2_wu84c"]
+[ext_resource type="FontFile" uid="uid://ochhsv7vyfk0" path="res://assets/fonts/Retro Gaming.ttf" id="3_8ln24"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wu84c"]
+bg_color = Color(0.27058825, 0.3019608, 0.34901962, 1)
+
+[node name="MainMenu" type="Control" unique_id=1809192913]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wu84c")
+
+[node name="Background" type="TextureRect" parent="." unique_id=795666809]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_bqqt6")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1300283731]
+modulate = Color(1, 1, 1, 0.70980394)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_wu84c")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="." unique_id=1909139096]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -219.0
+offset_top = 64.0
+offset_right = 226.0
+offset_bottom = 192.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 100
+text = "LINKED"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=188464143]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -107.5
+offset_top = -112.0
+offset_right = 107.5
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NewGame" type="Button" parent="VBoxContainer" unique_id=745288031]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_hover_color = Color(0.326718, 0.5347951, 0.7897116, 1)
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 35
+text = "New Game"
+flat = true
+
+[node name="Continue" type="Button" parent="VBoxContainer" unique_id=2049258074]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_hover_color = Color(0.326718, 0.5347951, 0.7897116, 1)
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 35
+text = "Continue"
+flat = true
+
+[node name="Credit" type="Button" parent="VBoxContainer" unique_id=107119582]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_hover_color = Color(0.326718, 0.5347951, 0.7897116, 1)
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 35
+text = "Credit"
+flat = true
+
+[node name="QuitGame" type="Button" parent="VBoxContainer" unique_id=1442507101]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_hover_color = Color(0.326718, 0.5347951, 0.7897116, 1)
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 35
+text = "Quit Game"
+flat = true
+
+[node name="RolePopup" type="Panel" parent="." unique_id=1754828311]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -223.0
+offset_top = -117.0
+offset_right = 218.0
+offset_bottom = 193.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wu84c")
+
+[node name="Label" type="Label" parent="RolePopup" unique_id=1047168097]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -144.5
+offset_top = 72.0
+offset_right = 146.5
+offset_bottom = 111.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 30
+text = "Pilih Perspektif"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="RolePopup" unique_id=1629767015]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -133.5
+offset_top = 44.0
+offset_right = 131.5
+offset_bottom = 84.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 80
+
+[node name="Detective" type="Button" parent="RolePopup/HBoxContainer" unique_id=2020568631]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_hover_color = Color(0.3254902, 0.53333336, 0.7882353, 1)
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 20
+text = "Detective"
+flat = true
+
+[node name="Hacker" type="Button" parent="RolePopup/HBoxContainer" unique_id=914950577]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.3254902, 0.53333336, 0.7882353, 1)
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 20
+text = "Hacker"
+flat = true
+
+[node name="Close" type="Button" parent="RolePopup" unique_id=1069416394]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -50.0
+offset_bottom = 47.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 30
+text = "x"
+
+[connection signal="pressed" from="VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitGame" to="." method="_on_quit_game_pressed"]
+[connection signal="pressed" from="RolePopup/HBoxContainer/Detective" to="." method="_on_detective_pressed"]
+[connection signal="pressed" from="RolePopup/HBoxContainer/Hacker" to="." method="_on_hacker_pressed"]
+[connection signal="pressed" from="RolePopup/Close" to="." method="_on_close_pressed"]

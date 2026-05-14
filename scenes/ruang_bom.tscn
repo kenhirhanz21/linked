@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://cdhwhl4q3gpxt"]
+
+[ext_resource type="Script" uid="uid://du1bvb6oo5drr" path="res://scripts/ruang_bom.gd" id="1_sbmkg"]
+[ext_resource type="Texture2D" uid="uid://dxhrsg2r7dvrj" path="res://assets/images/Simple_flat_cartoon_background_of_202605092214.jpeg" id="2_kxx2i"]
+[ext_resource type="Texture2D" uid="uid://b00moenns5h56" path="res://assets/images/the_screen_is_empty,_without_202605092218 (1).png" id="3_o0t3a"]
+[ext_resource type="FontFile" uid="uid://ochhsv7vyfk0" path="res://assets/fonts/Retro Gaming.ttf" id="4_adw7c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ug3bf"]
+bg_color = Color(0.43519226, 0.4351923, 0.43519217, 1)
+
+[node name="RuangBom" type="Control" unique_id=1969482535]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sbmkg")
+
+[node name="LayarRuangan" type="TextureRect" parent="." unique_id=2136263530]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_kxx2i")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BtnKlikBom" type="Button" parent="LayarRuangan" unique_id=1072592531]
+layout_mode = 0
+offset_left = 579.0
+offset_top = 319.0
+offset_right = 713.0
+offset_bottom = 438.0
+flat = true
+
+[node name="LayarZoomBom" type="Control" parent="." unique_id=70156910]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GambarBomDetail" type="TextureRect" parent="LayarZoomBom" unique_id=606496513]
+layout_mode = 0
+offset_left = 81.0
+offset_top = -79.0
+offset_right = 1213.0
+offset_bottom = 870.0
+texture = ExtResource("3_o0t3a")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BtnMerah" type="Button" parent="LayarZoomBom/GambarBomDetail" unique_id=94230980]
+layout_mode = 0
+offset_left = 407.0
+offset_top = 370.0
+offset_right = 490.0
+offset_bottom = 462.0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="BtnKuning" type="Button" parent="LayarZoomBom/GambarBomDetail" unique_id=12318566]
+layout_mode = 0
+offset_left = 524.0
+offset_top = 371.0
+offset_right = 607.0
+offset_bottom = 463.0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="BtnHijau" type="Button" parent="LayarZoomBom/GambarBomDetail" unique_id=1168740052]
+layout_mode = 0
+offset_left = 642.0
+offset_top = 372.0
+offset_right = 725.0
+offset_bottom = 464.0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="BtnDefuseDetektif" type="Button" parent="LayarZoomBom/GambarBomDetail" unique_id=1567685925]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 427.0
+offset_top = 513.0
+offset_right = 705.0
+offset_bottom = 597.0
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ug3bf")
+
+[node name="LayarSimbol" type="Label" parent="LayarZoomBom" unique_id=930865579]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 479.0
+offset_top = 159.0
+offset_right = 821.0
+offset_bottom = 263.0
+theme_override_fonts/font = ExtResource("4_adw7c")
+theme_override_font_sizes/font_size = 50
+text = "KOTAK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="LayarZoomBom/GambarBomDetail/BtnMerah" to="." method="_on_btn_merah_pressed"]
+[connection signal="pressed" from="LayarZoomBom/GambarBomDetail/BtnKuning" to="." method="_on_btn_kuning_pressed"]
+[connection signal="pressed" from="LayarZoomBom/GambarBomDetail/BtnHijau" to="." method="_on_btn_hijau_pressed"]
+[connection signal="button_down" from="LayarZoomBom/GambarBomDetail/BtnDefuseDetektif" to="." method="_on_btn_defuse_detektif_button_down"]
+[connection signal="button_up" from="LayarZoomBom/GambarBomDetail/BtnDefuseDetektif" to="." method="_on_btn_defuse_detektif_button_up"]

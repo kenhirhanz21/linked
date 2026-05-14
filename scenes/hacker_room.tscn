@@ -1,0 +1,314 @@
+[gd_scene format=3 uid="uid://bm4fahcnkclhd"]
+
+[ext_resource type="Texture2D" uid="uid://ctmgxbhrnktdg" path="res://assets/images/laptop hacker.jpeg" id="1_63v7r"]
+[ext_resource type="Script" uid="uid://bhntyui4x3loe" path="res://scripts/hacker_room.gd" id="1_64osh"]
+[ext_resource type="Texture2D" uid="uid://bt3yrvy5nwklx" path="res://assets/images/gambartablet.png" id="2_64osh"]
+[ext_resource type="Texture2D" uid="uid://bjxj34eifvfow" path="res://assets/images/bg hacker.jpeg" id="2_flb4x"]
+[ext_resource type="FontFile" uid="uid://ochhsv7vyfk0" path="res://assets/fonts/Retro Gaming.ttf" id="3_flb4x"]
+[ext_resource type="Texture2D" uid="uid://dm5yixko8r32g" path="res://assets/images/tablet.jpeg" id="5_jq8qa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jq8qa"]
+bg_color = Color(1, 1, 1, 1)
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b1ahr"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_flb4x"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yx0qb"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="HackerRoom" type="Control" unique_id=1536185617]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_64osh")
+
+[node name="BackgroundHacker" type="TextureRect" parent="." unique_id=660560302]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_flb4x")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="TabletArea" type="Button" parent="BackgroundHacker" unique_id=2030940272]
+layout_mode = 0
+offset_left = 731.0
+offset_top = 435.0
+offset_right = 875.0
+offset_bottom = 488.0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="OverlayTabletLock" type="ColorRect" parent="." unique_id=1411232436]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.3882353)
+
+[node name="GambarTablet" type="TextureRect" parent="OverlayTabletLock" unique_id=370514253]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 104.0
+offset_right = 964.0
+offset_bottom = 598.0
+mouse_filter = 2
+texture = ExtResource("2_64osh")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="InputPIN" type="LineEdit" parent="OverlayTabletLock/GambarTablet" unique_id=339968235]
+self_modulate = Color(18.892157, 18.892157, 18.892157, 1)
+layout_mode = 0
+offset_left = 234.0
+offset_top = 250.0
+offset_right = 410.0
+offset_bottom = 290.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_flb4x")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_jq8qa")
+theme_override_styles/focus = SubResource("StyleBoxFlat_b1ahr")
+alignment = 1
+secret = true
+
+[node name="LabelHint" type="Label" parent="OverlayTabletLock/GambarTablet" unique_id=816417182]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 358.0
+offset_right = 448.0
+offset_bottom = 381.0
+text = "Hint: Tahun lahir bidadari kecilku"
+
+[node name="BtnEnter" type="Button" parent="OverlayTabletLock/GambarTablet" unique_id=855906672]
+layout_mode = 0
+offset_left = 282.0
+offset_top = 302.0
+offset_right = 362.0
+offset_bottom = 333.0
+text = "ENTER
+"
+
+[node name="BtnBackTablet" type="Button" parent="OverlayTabletLock" unique_id=391127183]
+layout_mode = 0
+offset_left = 1021.0
+offset_top = 602.0
+offset_right = 1148.0
+offset_bottom = 649.0
+theme_override_fonts/font = ExtResource("3_flb4x")
+theme_override_font_sizes/font_size = 30
+text = "< Back"
+
+[node name="GambarTabletHome" type="TextureRect" parent="." unique_id=2118210636]
+layout_mode = 0
+offset_left = 323.0
+offset_top = 107.0
+offset_right = 961.0
+offset_bottom = 606.0
+texture = ExtResource("5_jq8qa")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="TeksPuisi" type="RichTextLabel" parent="GambarTabletHome" unique_id=1252679897]
+layout_mode = 0
+offset_left = 379.0
+offset_top = 95.0
+offset_right = 559.0
+offset_bottom = 322.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_flb4x")
+theme_override_font_sizes/normal_font_size = 14
+bbcode_enabled = true
+text = "[fill]Di malam yang dingin, aku menyalakan [b]Api[/b] unggun. Di bawah terangnya [b]Bulan[/b], hembusan [b]Angin[/b] malam membawaku tertidur, hingga sang [b]Matahari[/b] pagi menyapa.[/fill]"
+
+[node name="BtnBackHome" type="Button" parent="GambarTabletHome" unique_id=520258531]
+layout_mode = 0
+offset_left = 698.0
+offset_top = 495.0
+offset_right = 825.0
+offset_bottom = 543.0
+theme_override_fonts/font = ExtResource("3_flb4x")
+theme_override_font_sizes/font_size = 30
+text = "< Back"
+
+[node name="LaptopArea" type="Button" parent="." unique_id=1061371612]
+layout_mode = 0
+offset_left = 381.0
+offset_top = 206.0
+offset_right = 660.0
+offset_bottom = 389.0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="OverlayLaptopZoom" type="Control" parent="." unique_id=1992426187]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="OverlayLaptopZoom" unique_id=790890658]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.3882353)
+
+[node name="MonitorFrame" type="TextureRect" parent="OverlayLaptopZoom" unique_id=2140873308]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -410.0
+offset_top = -267.5
+offset_right = 410.0
+offset_bottom = 267.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_63v7r")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LayarLogin" type="Control" parent="OverlayLaptopZoom/MonitorFrame" unique_id=196216588]
+visible = false
+anchors_preset = 0
+offset_left = 24.0
+offset_top = 31.5
+offset_right = 799.0
+offset_bottom = 475.5
+
+[node name="LockedLabel" type="Label" parent="OverlayLaptopZoom/MonitorFrame/LayarLogin" unique_id=592187592]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 93.0
+offset_right = 709.0
+offset_bottom = 132.0
+theme_override_colors/font_color = Color(0.16935498, 0.40886408, 0.5421745, 1)
+theme_override_fonts/font = ExtResource("3_flb4x")
+theme_override_font_sizes/font_size = 30
+text = "SYSTEM LOCKED - ENTER PASSCODE"
+
+[node name="InputPassPC" type="LineEdit" parent="OverlayLaptopZoom/MonitorFrame/LayarLogin" unique_id=891334245]
+layout_mode = 0
+offset_left = 276.0
+offset_top = 192.0
+offset_right = 533.0
+offset_bottom = 252.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_flb4x")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_flb4x")
+theme_override_styles/focus = SubResource("StyleBoxFlat_yx0qb")
+alignment = 1
+
+[node name="BtnLoginPC" type="Button" parent="OverlayLaptopZoom/MonitorFrame/LayarLogin" unique_id=1697361407]
+layout_mode = 0
+offset_left = 340.0
+offset_top = 305.0
+offset_right = 457.0
+offset_bottom = 344.0
+theme_override_fonts/font = ExtResource("3_flb4x")
+theme_override_font_sizes/font_size = 24
+text = "UNLOCK"
+
+[node name="LayarSoftware" type="Control" parent="OverlayLaptopZoom/MonitorFrame" unique_id=680952896]
+anchors_preset = 0
+offset_left = 30.0
+offset_top = 34.5
+offset_right = 804.0
+offset_bottom = 479.5
+
+[node name="IndikatorWarna" type="ColorRect" parent="OverlayLaptopZoom/MonitorFrame/LayarSoftware" unique_id=1659948348]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 58.0
+offset_right = 487.0
+offset_bottom = 188.0
+color = Color(0.89690256, 0.85516703, 0, 1)
+
+[node name="BtnLingkaran" type="Button" parent="OverlayLaptopZoom/MonitorFrame/LayarSoftware" unique_id=1232309316]
+layout_mode = 0
+offset_left = 584.0
+offset_top = 38.0
+offset_right = 673.0
+offset_bottom = 129.0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 60
+text = "〇"
+flat = true
+
+[node name="BtnKotak" type="Button" parent="OverlayLaptopZoom/MonitorFrame/LayarSoftware" unique_id=1106608787]
+layout_mode = 0
+offset_left = 572.0
+offset_top = 142.0
+offset_right = 685.0
+offset_bottom = 260.0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 80
+text = "◻"
+flat = true
+
+[node name="BtnSegitiga" type="Button" parent="OverlayLaptopZoom/MonitorFrame/LayarSoftware" unique_id=1642244655]
+layout_mode = 0
+offset_left = 579.0
+offset_top = 280.0
+offset_right = 676.0
+offset_bottom = 398.0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 80
+text = "△"
+flat = true
+
+[node name="BtnDefuse" type="Button" parent="OverlayLaptopZoom/MonitorFrame/LayarSoftware" unique_id=897895715]
+layout_mode = 0
+offset_left = 186.0
+offset_top = 275.0
+offset_right = 366.0
+offset_bottom = 359.0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.6297988, 0, 0.18613869, 1)
+theme_override_fonts/font = ExtResource("3_flb4x")
+theme_override_font_sizes/font_size = 30
+action_mode = 0
+text = "DEFUSE"
+
+[node name="BtnBackLaptop" type="Button" parent="OverlayLaptopZoom" unique_id=860969605]
+layout_mode = 0
+offset_left = 1033.0
+offset_top = 626.0
+offset_right = 1160.0
+offset_bottom = 673.0
+theme_override_fonts/font = ExtResource("3_flb4x")
+theme_override_font_sizes/font_size = 30
+text = "< Back"
+
+[connection signal="pressed" from="BackgroundHacker/TabletArea" to="." method="_on_tablet_area_pressed"]
+[connection signal="pressed" from="OverlayTabletLock/GambarTablet/BtnEnter" to="." method="_on_btn_enter_pressed"]
+[connection signal="pressed" from="OverlayTabletLock/BtnBackTablet" to="." method="_on_btn_back_tablet_pressed"]
+[connection signal="pressed" from="GambarTabletHome/BtnBackHome" to="." method="_on_btn_back_home_pressed"]
+[connection signal="pressed" from="LaptopArea" to="." method="_on_laptop_area_pressed"]
+[connection signal="pressed" from="OverlayLaptopZoom/MonitorFrame/LayarLogin/BtnLoginPC" to="." method="_on_btn_login_pc_pressed"]
+[connection signal="pressed" from="OverlayLaptopZoom/MonitorFrame/LayarSoftware/BtnLingkaran" to="." method="_on_btn_lingkaran_pressed"]
+[connection signal="pressed" from="OverlayLaptopZoom/MonitorFrame/LayarSoftware/BtnKotak" to="." method="_on_btn_kotak_pressed"]
+[connection signal="pressed" from="OverlayLaptopZoom/MonitorFrame/LayarSoftware/BtnSegitiga" to="." method="_on_btn_segitiga_pressed"]
+[connection signal="button_down" from="OverlayLaptopZoom/MonitorFrame/LayarSoftware/BtnDefuse" to="." method="_on_btn_defuse_button_down"]
+[connection signal="button_up" from="OverlayLaptopZoom/MonitorFrame/LayarSoftware/BtnDefuse" to="." method="_on_btn_defuse_button_up"]
+[connection signal="pressed" from="OverlayLaptopZoom/BtnBackLaptop" to="." method="_on_btn_back_laptop_pressed"]
